@@ -16,4 +16,14 @@ class Game {
         ];
         return players;
     }
+
+    /* 
+    *Gets game read for play
+    */
+
+    startGame() {
+
+
+    }
+
 }
