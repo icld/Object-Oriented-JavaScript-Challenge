@@ -5,6 +5,22 @@ class Game {
         this.ready = false
     }
 
+    // get activePlayer() {
+    //     let player = []
+    //     for (let i of this.players) {
+    //         if (this.active === true) {
+    //             player.push(this.player)
+    //         }
+    //     }
+    //     return player
+    // }
+
+    // the find method returns the first match
+    get activePlayer() {
+        return this.players.find(player => player.active);
+    }
+
+
     /** 
      * Creates two player objects
      * @return  {Array}    An array of two Player objects.
@@ -20,10 +36,11 @@ class Game {
     /* 
     *Gets game read for play
     */
-
     startGame() {
-
-
+        this.board.drawHTMLBoard();
+        this.activePlayer.activeToken.drawHTMLToken();
+        this.ready = true;
     }
+
 
 }
