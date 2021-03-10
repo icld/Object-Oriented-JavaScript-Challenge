@@ -26,10 +26,7 @@ class Game {
      * @return  {Array}    An array of two Player objects.
      */
     createPlayers() {
-        const players = [
-            new Player('Player 1', 1, '#e15258', true),
-            new Player('Player 1', 2, '#e59a13')
-        ];
+        const players = [new Player('Player 1', 1, '#e15258', true), new Player('Player 1', 2, '#e59a13')];
         return players;
     }
 
@@ -41,6 +38,4 @@ class Game {
         this.activePlayer.activeToken.drawHTMLToken();
         this.ready = true;
     }
-
-
 }
