@@ -27,7 +27,15 @@ class Board {
             // push the column back into the spaces array
             spaces.push(column)
         }
-
         return spaces;
+    }
+
+    // first for loop iterates through the columns.  the nested loop iterates through each space within that column 
+    drawHTMLBoard() {
+        for (let column of this.spaces) {
+            for (let space of column) {
+                space.drawSVGSpace();
+            }
+        }
     }
 }
