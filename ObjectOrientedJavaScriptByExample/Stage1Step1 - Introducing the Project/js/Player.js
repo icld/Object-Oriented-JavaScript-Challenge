@@ -19,24 +19,14 @@ class Player {
             let token = new Token(i, this);
             tokens.push(token)
         }
+        return tokens
     }
-
-    // get unusedTokens() {
-    //     const undroppedTokens = [];
-    //     for (let i of this.tokens) {
-    //         if (this.dropped = false) {
-    //             let token = (i, this)
-    //             undroppedTokens.push(token)
-    //         }
-    //     }
-    //     return undroppedTokens
-    // }
 
 
     // filter method returns an array 
     get unusedTokens() {
         // returns any token who's dropped property does not = true 
-        return this.tokens.filter(token => !token.dropped)
+        return this.tokens.filter(token => !token.dropped);
     }
 
 

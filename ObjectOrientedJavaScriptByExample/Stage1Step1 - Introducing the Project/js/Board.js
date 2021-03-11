@@ -16,16 +16,16 @@ class Board {
 
         for (let x = 0; x < this.columns; x++) {
             //empty array of columns
-            const column = [];
+            const col = [];
             // iterate through the rows in columns and make new space objects 
             // pass the space constructor method on them
             // push new space on the column array
             for (let y = 0; y < this.rows; y++) {
                 const space = new Space(x, y);
-                column.push(space);
+                col.push(space);
             }
             // push the column back into the spaces array
-            spaces.push(column)
+            spaces.push(col)
         }
         return spaces;
     }
