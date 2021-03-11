@@ -16,7 +16,7 @@ class Game {
      */
     createPlayers() {
         const players = [new Player('Player 1', 1, '#e15258', true),
-        new Player('Player 1', 2, '#e59a13')];
+        new Player('Player 2', 2, '#e59a13')];
         return players;
     }
 
@@ -150,10 +150,8 @@ class Game {
     * @param {string} message - Game over message.      
     */
     gameOver(message) {
-        const gameOverDiv = document.getElementById('game-over');
-        gameOverDiv.style.display = 'block';
-        gameOverDiv.textContent = message
-
+        document.getElementById('game-over').style.display = 'block';
+        document.getElementById('game-over').textContent = message;
     }
 
 
